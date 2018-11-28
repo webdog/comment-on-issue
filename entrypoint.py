@@ -29,7 +29,6 @@ if json_data['action'] == "created":
     new_comm = issue.create_comment(
         f"# {args} \
         ![octocat](https://octodex.github.com/images/justicetocat.jpg)")
-    new_comm.
 
     
     
