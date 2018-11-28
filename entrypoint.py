@@ -4,6 +4,7 @@ import os
 import argparse
 import github3
 import json
+import sys
 
 # The event payload lives in this file in Docker"
 jsonf = open('/github/workflow/event.json', 'r')
@@ -29,6 +30,6 @@ if json_data['action'] == "created":
     new_comm = issue.create_comment(
         f"# {args} \
         ![octocat](https://octodex.github.com/images/justicetocat.jpg)")
-
+    sys.stdout.write(json_data)
     
     
