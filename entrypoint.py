@@ -25,7 +25,11 @@ if json_data['action'] == "created":
     user = json_data['user']['login']
     repo = json_data['repository']['name']
     issue = gh.issue(user, repo, issue_num)
-    issue.create_comment(
+    print(json_data)
+    new_comm = issue.create_comment(
         f"# {args} \
-        ![octocat](https://octodex.github.com/images/justicetocat.jpg)"
-    )
+        ![octocat](https://octodex.github.com/images/justicetocat.jpg)")
+    new_comm.
+
+    
+    
